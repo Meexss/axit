@@ -1,0 +1,542 @@
+body {
+   margin: 0;
+   font-family: 'Monserrat', sans-serif;
+   color: #2D3033;
+   line-height: 1,6;
+   font-size: 15px;
+}
+
+*,
+*::before
+*::after {
+   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   margin: 0;
+}
+
+/* container*/
+.container {
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+/* intro */
+.intro {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   width: 100%;
+   height: 100vh;
+
+   background: 
+   url("./banner.jpg")
+   center
+   no-repeat;
+   background-size: cover;
+}
+
+.intro-title {
+   color: #fff;
+   text-transform: uppercase;
+   font-size: 150px;
+   font-weight: 700;
+   text-align: center;
+   line-height: 1;
+}
+
+.intro-inner {
+   width: 100%;
+   max-width: 1170px;
+   margin: 0 auto;
+   text-align: center;
+   
+}
+
+.intro-suptitle {
+   font-size: 64px;
+   color: #fff;
+   font-family: 'Kaushan Script';
+   margin-bottom: 9px;
+}
+
+.intro-title:after {
+   content: "";
+   display: block;
+   width: 170px;
+   height: 3px;
+   background-color: #fff;
+   margin: 53px auto 72px;
+}
+
+.intro-btn {
+   display: inline-block;
+   vertical-align: top;
+   border: 3px solid #fff;
+   padding: 8px 30px;
+   color: #fff;
+   text-transform: uppercase;
+   font-size: 14px;
+   font-weight: 700;
+   text-decoration: none;
+   transition: background .1s lineral, color .1s lineral;
+}
+
+.intro-btn:hover {
+   background-color: #333;
+}
+
+/*header*/
+.header {
+   padding-top: 42px;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 1000;
+}
+.header-logo {
+   font-size: 30px;
+   font-weight: 700;
+   color: #fff;
+}
+
+.header__inner {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+
+/*nav*/
+.nav {
+   font-size: 14px;
+   text-transform: uppercase;
+}
+.nav-link {
+   display: inline-block;
+   vertical-align: top;
+   margin: 0 10px;
+   color: white;
+   text-decoration: none;
+   position: relative;
+
+   transition: color 0.1s lineral;
+}
+
+.nav-link:hover::after, .line:after {
+opacity: 1;
+}
+.nav-link:hover {
+   color: #F4BF87;
+}
+.line {
+   color: #F4BF87;
+}
+
+.nav-link::after, .line::after {
+   content: "";
+   display: block;
+   width: 100%;
+   height: 3px;
+   background-color: #F4BF87;
+   opacity: 0;
+
+   position: absolute;
+   top: 100%;
+   left: 0;
+   z-index: 1;
+   transition: opacity .1s ;
+
+}
+
+/*slider*/
+.slider {
+   width: 100%;
+position: absolute;
+bottom: 0;
+left: 0;
+z-index: 1;
+}
+
+.slider__item {
+   width: 23%;
+   text-transform: uppercase;
+   font-size: 18px;
+   color: #fff;
+   padding: 20px 0;
+   border-top: 3px solid #fff;
+   position: relative;
+   opacity: 0.7;
+}
+
+.slider__inner{
+
+   display: flex;
+   justify-content: space-between;
+
+
+}
+
+.active {
+   opacity: 1;
+}
+
+.active:before {
+   content: "";
+   display: block;
+   width: 30%;
+   height: 3px;
+   position: absolute;
+   top: -3px;
+   left: 0;
+   z-index: 1;
+   background-color: #f38181;
+}
+
+.slider-number {
+   font-size: 36px;
+   font-weight: 700;
+}
+
+
+/*about us*/
+.section {
+   padding: 80px 0;
+}
+.container {
+}
+.section__header {
+   width: 100%;
+   max-width: 1186px;
+   margin: 0 auto 42px;
+   text-align: center;
+}
+.section__suptitle {
+   font-size: 30px;
+   font-family: 'Kaushan Script';
+   font-weight: 400;
+   color: #333;
+
+}
+.section__title {
+   text-transform: uppercase;
+   font-size: 36px;
+   font-weight: 900;
+   color: #333;
+
+}
+
+.section__title:after {
+   content: "";
+   display: block;
+   width: 170px;
+   height: 3px;
+   background-color: #F38281;
+   margin: 24px auto 0;
+}
+
+.sction_dicsip {
+   font-size: 18px;
+   line-height: 21px;
+   font-weight: 400;
+   margin-top: 24px;
+   color: #000;
+}
+
+/*about*/
+.about {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 106px;
+}
+.about__item {
+   width: 370px;
+   position: relative;
+   background-color: #95E1D3;
+}
+
+.about__img {
+   background: linear-gradient(to bottom,#E98283, #EDD789);
+}
+
+.about__item:hover .about__img {
+transform: translate3d(-10px, -10px, 0);
+
+}
+
+.about__item:hover .about__img img {
+   opacity: .1;
+}
+
+.about__img img {
+   display: block;
+   transition: opacity .1s lineral;
+
+   transform: transform .2s lineral;
+}
+
+.about-text {
+   width: 100%;
+   color: #FFF;
+   text-transform: uppercase;
+   font-size: 24px;
+   text-align: center;
+   font-weight: 500;
+   position: absolute;
+   top: 50%;
+   left: 0;
+   z-index: 2;
+   transform: translate3d(0, -50%, 0);
+   opacity: 0;
+   transition: opacity .1s lineral;
+}
+
+.about-text:hover {
+   opacity: 1;
+}
+
+/*statistics*/
+.statistic {
+background-color: #95E1D3;
+margin-bottom: 42px;
+}
+
+.start {
+display: flex;
+}
+
+.start__item {
+flex:  1 1 0;
+border-left: 1px solid #b5eae0;
+text-align: center;
+color: #fff;
+padding: 70px 25px;
+
+}
+
+.start__item:last-child {
+   border-right: 1px solid #b5eae0;
+}
+
+/*services*/
+.start__count {
+   font-size: 64px;
+   font-weight: 700;
+   line-height: 75px;
+   margin-bottom: 10px;
+}
+
+.stat__text {
+   font-size: 24px;
+   font-weight: 700;
+}
+
+.services {
+   display: flex;
+}
+.services__item {
+   flex:  1 1 0;
+   padding-left: 85px;
+   padding-right: 35px;
+   position: relative;
+   padding-bottom: 140px;
+
+}
+
+.services__icon {
+   width: 10%;
+   position: absolute;
+   top: 0;
+   left: 28px;
+   z-index: 1;
+}
+
+.services__title {
+   font-size: 24px;
+   font-weight: 700;
+   color: #333;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+}
+
+.serviced__title {
+   font-size: 18px;
+   font-weight: 400;
+}
+
+.section-devices {
+   padding-bottom: 0;
+   background: url("./unsplash_lpjb_UMOyx8.jpg") center no-repeat;
+   background-size: cover;
+
+}
+
+.devices {
+   width: 100%;
+   max-width: 1170px;
+   margin: 0 auto;
+   position: relative;
+   
+}
+
+.devices__item {
+   display: block;
+}
+
+.item-ipad {
+   width: 1170px;
+   height: 525px;
+}
+
+.item-iphone {
+   position: absolute;
+   bottom: -40px;
+   right: -2%;
+   z-index: 1;
+
+}
+
+
+/*wedo*/
+.wedo {
+   display: flex;
+}
+
+.wedo__item {
+   flex:  1 1 0;
+}
+
+/*accordion*/
+.accordion__item {
+   border: 1px solid #e5e5e5;
+   margin-bottom: 22px;
+}
+
+.accordion__item.active 
+.accordion__contant {
+   display: block;
+
+}
+
+
+.accordion__header {
+   padding: 32px 20px;
+   border-bottom: 1px solid #e5e5e5;
+   position: relative;
+}
+
+.acordion__icon {
+   position: absolute;
+   top: 50%;
+   left: 18px;
+   z-index: 1;
+
+   transform: translateY(-50%);
+}
+
+.accordion__contant {
+   padding: 15px 20px;
+   font-size: 18px;
+   font-weight: 400;
+   color: #2D3033;
+   font-style: italic;
+   display: none;
+
+}
+
+.accordion__title {
+font-size: 24px;
+font-weight: 700;
+text-transform: uppercase;
+padding-left: 58px;
+}
+
+.accordion__header::after {
+   content: "";
+   display: block;
+   width: 42px;
+   height: 42px;
+   background: url("./arrow_down.png") center no-repeat;  
+   position: absolute;
+   top: 10%;
+   right: 20px;   
+   z-index: 1;
+} 
+
+/*reviwes*/
+.section--grey {
+   background-color: #F8F8F8;
+   margin-top: 34px;
+}
+.reviews {
+   padding: 0 110px;
+   position: relative;
+}
+.reviews__item {
+   padding: 0 205px;
+   position: relative;
+}
+.reviws__icon {
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1;
+}
+.reviews__text {
+   font-size: 24px;
+   font-style: italic;
+   font-weight: 500;
+   color: #A9AFB1;
+   margin-bottom: 21px;
+}
+.review__autor {
+   font-size: 30px;
+   font-weight: 400;
+   font-family: 'Kaushan Script';
+
+}
+
+.review__autor::before {
+   content: "";
+   display: inline-block;
+   vertical-align: middle;
+   width: 70px;
+   height: 4px;
+   background-color: #F38281;
+   margin-right: 56px;
+
+}
+
+.reviews-btn {
+   position: absolute;
+   top: 50%;
+   transform: translate(-50%);
+   z-index: 1;
+}
+
+.reviews-btn:after {
+   content: "";
+   display: block;
+   width: 42px;
+   height: 42px;
+   background: url("./arrow_down.png") center no-repeat;  
+   position: absolute;
+   z-index: 1;
+   transform: rotate(-90deg);
+   top: 50%;
+   
+} 
+
+.prev {
+   left: 0;
+}
+
+.next {
+   right: 0;
+   transform: rotate(180deg);
+}
